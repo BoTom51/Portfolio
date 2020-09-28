@@ -1,0 +1,200 @@
+* {
+  box-sizing: border-box;
+  padding: 0px;
+  margin: 0px;
+}
+html {
+  height: 100%;
+  background-image: url("./parallaxe.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+body {
+  min-height: 100%;
+  display: flex; 
+  flex-direction: column;
+  font-size: 14px;
+  background-color: #ffffff;
+}
+@media screen and (min-width: 777px) {
+  body {
+    width: 90%;
+    margin: 0px auto;
+  }
+}
+@media screen and (min-width: 1024px) {
+  body {
+    flex-wrap: wrap;
+    flex-direction: row;
+    width: 1024px;
+  }
+}
+/*-------------------------------*/
+header,
+main,
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /*responsive*/
+  width: 100%;
+  max-width: 1024px;
+  margin: auto;
+}
+main {
+  flex-grow: 1;
+}
+hr.separateur {
+  width: 100%;
+  color: #ffffff4f;
+}
+@media screen and (max-width: 1024px) {
+  .desktop {
+    display: none;
+  }
+}
+/*------------HEADER----------*/
+header .logo {
+  margin: 20px;
+  height: 100px;
+}
+header h1,
+header nav {
+  width: 80%;
+}
+h1 {
+  text-align: center;
+  color: #d64848;
+}
+/*--- MENU PRINCIPALE ---*/
+header nav {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: 20px;
+}
+nav a {
+  width: 100%;
+  padding: 10px;
+  margin: 1px 0px;
+  color: inherit;
+  font-weight: bolder;
+  text-decoration: none;
+  text-align: center;
+  background-color: #e0dddd;
+}
+@media screen and (min-width: 777px) {
+  header nav {
+    flex-direction: row;
+    width: 90%;
+  }
+}
+@media screen and (min-width: 1024px) {
+  header {
+    flex-direction: row;
+    flex-wrap: wrap;
+    height: 142px;
+  }
+  header h1 {
+    text-align: left;
+    width: 30%;
+  }
+  header nav {
+    justify-content: space-evenly;
+    width: 52%;
+  }
+  header nav a {
+    background-color: inherit;
+    width: auto;
+  }
+}
+/*-----------MAIN--------------*/
+main h2,
+main img,
+main p {
+  width: 80%;
+}
+h2 {
+  text-align: center;
+  margin: 20px 0px;
+}
+p {
+  margin: 20px 0px;
+}
+@media screen and (min-width: 1024px) {
+  main {
+    width: 60%;
+  }
+  body aside {
+    flex-direction: column;
+    flex-wrap: nowrap;
+    width: 40%;
+    margin: 0px;
+  }
+}
+/*-----------ASIDE--------------*/
+aside {
+  margin: 10px 0px;
+  display: none;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+}
+aside div {
+  padding: 20px;
+}
+hr {
+  width: 100%;
+}
+h3 {
+  padding: 0px 10px 10px;
+}
+.top .classement,
+.galerie .imgGalerie {
+  padding-top: 20px;
+}
+.top {
+  width: 30%;
+}
+.top .classement {
+  padding-left: 14px;
+  list-style-type: decimal;
+}
+aside .galerie {
+  width: 70%;
+}
+.galerie .imgGalerie {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+}
+.galerie .imgGalerie li {
+  padding: 3px 3px 3px 0px;
+}
+@media screen and (min-width: 777px) {
+  aside {
+    display: flex;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .top,
+  .galerie {
+    width: 100%;
+  }
+  hr.tab {
+    display: none;
+  }
+}
+/*-----------FOOTER--------------*/
+footer {
+  margin: 10px 0px;
+}
+footer hr,
+footer span {
+  width: 80%;
+}
+footer span {
+  padding: 15px;
+  text-align: center;
+}

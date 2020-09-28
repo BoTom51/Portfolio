@@ -1,0 +1,236 @@
+* {
+   box-sizing: border-box;
+   padding: 0px;
+   margin: 0px;
+}
+html,
+body,
+main {
+   height: 100%;
+}
+body {
+   font-family: "Sawarabi Gothic", sans-serif;
+   font-size: 12px;
+   background-color: #2e2e2e;
+   color: #d4f7cf;
+}
+/*///////////////// MAIN /////////////////*/
+h1 {
+   font-size: 2rem;
+   text-align: center;
+   width: 100%;
+   padding: 15px;
+}
+h2 {
+   text-align: center;
+   font-size: 1.5rem;
+   width: 100%;
+   margin-bottom: 10px;
+   border-bottom: solid;
+}
+section {
+   display: flex;
+   padding: 5px;
+   flex-direction: column;
+}
+@media screen and (min-width: 768px) {
+   h1 {
+      margin: auto;
+      max-width: 700px;
+   }
+   section {
+      width: max-content;
+      margin: auto;
+   }
+}
+/*///////// PROFIL /////////*/
+.profil {
+   display: flex;
+   flex-direction: column;
+   padding: 10px;
+   background-color: #606d6de7;
+   /* color: #ffffff; */
+   transition: background-color 1s, color 1s;
+}
+.profil h2 {
+   margin-top: 10px;
+}
+.profil .blokk:not(.bottomBorder) {
+   margin: 5px 10px;
+}
+.profil .blokk {
+   display: flex;
+   align-items: center;
+}
+.profil .blokk img {
+   display: block;
+   width: 25px;
+   margin-right: 5px;
+}
+div.bottomBorder {
+   align-self: flex-end;
+   width: 100%;
+   margin: 10px 0px;
+   color: inherit;
+   border-bottom: solid;
+}
+.profil:hover {
+   background-color: #568562;
+   color: #000000;
+}
+/* ---- media query PROFIL ---- */
+@media screen and (min-width: 500px) {
+   .profil {
+      flex-wrap: wrap;
+      flex-direction: row;
+      justify-content: center;
+   }
+}
+@media screen and (min-width: 768px) {
+   .profil {
+      max-width: 700px;
+   }
+}
+/*///////// INFO (EXP/FORMATION/COMP/COMPLEM) /////////*/
+.info {
+   display: flex;
+   flex-direction: column;
+   padding: 10px;
+}
+.info h2 {
+   margin-top: 10px;
+}
+.exp,
+.form {
+   display: flex;
+   flex-direction: column;
+   padding: 5px;
+}
+.info ul {
+   padding: 5px 15px;
+}
+.info .nolist {
+   padding: 5px;
+   list-style: none;
+}
+.relative {
+   position: relative;
+}
+.absolute {
+   position: absolute;
+}
+.flex-center {
+   display: flex;
+   align-items: center;
+}
+strong {
+   font-size: 13px;
+   color: #56a04b;
+}
+/*//// ACORDEON ////*/
+.btn {
+   position: absolute;
+   left: 2px;
+   top: 10px;
+   width: max-content;
+   font-size: 1.3rem;
+   border: #000000 solid 1px;
+   border-radius: 50px;
+}
+.checkBurger {
+   display: none;
+}
+.contenu {
+   display: flex;
+   flex-direction: column;
+   overflow-y: hidden;
+   /* ------- animation ------- */
+   height: 0px;
+   transition: height 0.5s ease; /*fonctionne sur le changement de hauteur*/
+}
+/* ------- animation ------- */
+.checkBurger:checked + .contenu.zero {
+   height: 112px;
+}
+.checkBurger:checked + .contenu.un {
+   height: 197px;
+}
+.checkBurger:checked + .contenu.deux {
+   height: 505px;
+}
+.checkBurger:checked + .contenu.trois {
+   height: 300px;
+}
+/* ---- media query INFO ---- */
+@media screen and (min-width: 400px) {
+   .checkBurger:checked + .contenu.zero {
+      height: 86px;
+   }
+   .checkBurger:checked + .contenu.un {
+      height: 152px;
+   }
+   .checkBurger:checked + .contenu.deux {
+      height: 555px;
+   }
+   .exp,
+   .form {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      padding: 5px;
+   }
+   .date {
+      width: 70px;
+      margin-right: 50px;
+   }
+   .nom {
+      width: 250px;
+      margin-right: auto;
+   }
+   .lieu {
+      margin-left: 120px;
+      width: 100%;
+   }
+}
+@media screen and (min-width: 550px) {
+   .checkBurger:checked + .contenu.un {
+      height: 122px;
+   }
+}
+@media screen and (min-width: 768px) {
+   .info {
+      width: 700px;
+   }
+   .btn {
+      display: none;
+   }
+   .contenu.zero {
+      height: 86px;
+   }
+   .contenu.un {
+      height: 122px;
+   }
+   .contenu.deux {
+      height: 555px;
+   }
+   .contenu.trois {
+      height: 300px;
+   }
+}
+.exp:hover,
+.form:hover,
+li:hover {
+   background-color: #274e27;
+}
+.dessus {
+   z-index: 1;
+}
+/* --- svg --- */
+.iconLanguage {
+   display: flex;
+   justify-content: center;
+   position: relative;
+   top: -55px;
+   width: 100%;
+   height: 100%;
+}

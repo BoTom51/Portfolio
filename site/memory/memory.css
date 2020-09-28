@@ -1,0 +1,101 @@
+@import url("https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap");
+* {
+   box-sizing: border-box;
+   padding: 0px;
+   margin: 0px;
+}
+:root {
+   --dim-carte-width: 120px;
+   --dim-carte-height: 160px;
+   --font-size: 100px;
+}
+/*/////// MISE EN PAGE ///////*/
+html, body {
+   height: 100%;
+}
+body {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: stretch;
+   background-color: #2b2b2b;
+   font-family: 'EB Garamond', serif;
+}
+h1, p {
+   user-select: none;
+   color: white;
+   text-align: center;
+   padding: 5px;
+}
+/*/////// CONTENEUR DU JEU ///////*/
+#tapis {
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+   /*------ dim/placement ------*/
+   margin: auto;
+   max-width: 1000px;
+   /*------ cosmétique ------*/
+   font-size: var(--font-size);
+}
+#tapis div {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   /*------ dim/placement ------*/
+   width: var(--dim-carte-width);
+   height: var(--dim-carte-height);
+   margin: 2px;
+   /*------ cosmétique ------*/
+   user-select: none;
+   border-radius: 10px;
+   border: 1px #000000 solid;
+   font-weight: bolder;
+   text-align: center;
+   color: #48488f;
+   background-color: #48488f;
+   box-shadow: #000000 0px 1px 5px;
+   transition: transform 3s;
+}
+#tapis div.retourner {
+   background-color: #ffffff;
+}
+#tapis div.paire {
+   background-color: #3d3c3c8f;
+   pointer-events: none;
+}
+.desactiver {
+   pointer-events: none;
+}
+#tapis div:hover {
+   opacity: 0.9;
+}
+/*/////// MEDIA QUERIES ///////*/
+@media screen and (max-width: 450px) {
+   #tapis div {
+      width: calc(var(--dim-carte-width) / 2.5);
+      height: calc(var(--dim-carte-height) / 2.5);
+      font-size: calc(var(--font-size) / 4);
+   }
+}
+@media screen and (min-width: 450px) and (max-width: 600px) {
+   #tapis div {
+      width: calc(var(--dim-carte-width) / 2);
+      height: calc(var(--dim-carte-height) / 2);
+      font-size: calc(var(--font-size) / 3);
+   }
+}
+@media screen and (min-width: 600px) and (max-width: 750px) {
+   #tapis div {
+      width: calc(var(--dim-carte-width) / 1.5);
+      height: calc(var(--dim-carte-height) / 1.5);
+      font-size: calc(var(--font-size) / 2);
+   }
+}
+@media screen and (min-width: 750px) and (max-width: 995px) {
+   #tapis div {
+      width: calc(var(--dim-carte-width) / 1.2);
+      height: calc(var(--dim-carte-height) / 1.2);
+      font-size: calc(var(--font-size) / 1.5);
+   }
+}
