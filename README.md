@@ -1,2 +1,2 @@
 # Portfolio
-Un exposé de mes réalisations au cours de formation.
+Un exposé de mes réalisations au cours de ma formation.
