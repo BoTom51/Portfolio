@@ -42,7 +42,7 @@
         </div>
         <div class="blokk">
           <img src="./img/git.png" alt="Réalisations">
-          <a href="http://dev-workshop.alwaysdata.net/portail">Portfolio</a> / <a href="https://github.com/BoTom51/">Github</a>
+          <a href="https://dev-workshop.alwaysdata.net/portail">Portfolio</a> / <a href="https://github.com/BoTom51/">Github</a>
         </div>
         <div class="bottomBorder"></div>
       </aside>
